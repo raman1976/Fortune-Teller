@@ -1,0 +1,24 @@
+#This game will tell your fortune depending on the number you roll
+import random
+fortune = False
+while not fortune:
+        print("Welcome to the Fortune Teller")
+        print("--------------------------------------")
+        print(" I know how good your future will be, based on your luck! ")
+        print("\nIf you're lucky, you'll have a lucky outcome. Tell me to 'roll' when you're ready to roll the dice for your future.\n")
+        froll = input()
+        if froll == "roll":
+            random_fortune_number = random.randint(1,10)
+            if random_fortune_number > 1 and random_fortune_number< 5:
+                print("Your fortune number is: " + str(random_fortune_number))
+                print("You have a low fortune today!")
+            elif random_fortune_number == 5:
+                print("Your fortune number is: " + str(random_fortune_number))
+                print("You have an average fortune today!")
+            elif random_fortune_number > 5 and random_fortune_number <=10:
+                print("Your fortune number is: " + str(random_fortune_number))
+                print("You have a great fortune today!")
+            else:
+                print("\n")
+        else:
+            print("You did not select to roll the dice! Play again by typing 'roll' below")
